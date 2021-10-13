@@ -17,34 +17,32 @@ for(let posicion = 0; posicion < series.length; posicion++){
 //agregar un elemento al final de un arreglo
 series.push("breaking bad");
 
-document.write("<br><br><b>Arreglos series con nuevo elemento</b> <br>")
 
-for(let posicion = 0; posicion < series.length; posicion++){
-    document.write("<br>" +series[posicion]);
-}
+mostrarArreglo("Arreglos series con nuevo elemento")
 
 //agregar un elemento en una posicion particular 
 series.splice(1, 0, "GOT");
 
-document.write("<br><br><b>Agregar un elemento en una posicion particular</b> <br>")
-for(let posicion = 0; posicion < series.length; posicion++){
-    document.write("<br>" +series[posicion]);
-}
+mostrarArreglo("agregar un elemento en una posicion particular")
 
 //eliminar un elemento del arreglo
 series.splice(5, 1)
 
-document.write("<br><br><b>eliminar un elemento de una posicion particular</b> <br>")
 
-for(let posicion = 0; posicion < series.length; posicion++){
-    document.write("<br>" +series[posicion]);
-}
+mostrarArreglo("eliminar un elemento de una posicion particular")
+
 
 //modificar un valor del arreglo
 series[4] = "friends";
 
-document.write("<br><br><b>modificar el valor de un arreglo</b> <br>")
 
+mostrarArreglo("modificar un valor del arreglo")
+
+
+function mostrarArreglo(titulo){
+    document.write("<br><br><b>" + titulo + "</b> <br>")
+    
 for(let posicion = 0; posicion < series.length; posicion++){
     document.write("<br>" +series[posicion]);
+}
 }
