@@ -45,3 +45,12 @@ delete usuarioPablo.estado;
 
 // usar un metodo
 usuarioPablo.login()
+
+// mostrar todas las propiedades de un objeto
+let claves = Object.keys(usuarioPablo);
+console.log(claves)
+
+for(let posicion = 0; posicion < claves.length; posicion++){
+    // document.write("<br>"+claves[posicion])
+    document.write("<br>"+claves[posicion] +" : " +usuarioPablo[claves[posicion]])
+}
