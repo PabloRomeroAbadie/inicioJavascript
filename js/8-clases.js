@@ -55,6 +55,26 @@ class Alumno extends persona {
         this.legajo = legajo;
         this.calificaciones = [];
     }
+
+    get mostrarLegajo(){
+        return this.legajo;
+    }
+
+    // mostrarDatos(){
+    //     document.write(`<br>Nombre: ${this.nombre}
+    //     <br>Apellido: ${this.apellido}
+    //     <br>Email: ${this.email}
+    //     <br>Edad: ${this.edad}
+    //     <br>direccion: ${this.direccion}
+    //     <br>Dni: ${this.dni}
+    //     <br>Curso: ${this.curso}
+    //     <br>Legajo: ${this.legajo}`) 
+    // }
+
+    mostrarDatosAlumno(){
+        document.write(`<br>Curso: ${this.curso} 
+        <br>Legajo:${this.legajo}`)
+    }
 }
 
 //declarar variables
@@ -90,4 +110,12 @@ Pablo.modificarNombre = "Paulo";
 document.write(`<h6>Apellido: ${Pablo.mostrarNombre} ${Pablo.mostrarApellido}</h6>`);
 
 document.write(`<h6>Apellido: ${axel.mostrarNombre} ${axel.mostrarApellido}</h6>`);
+
+// crear un objeto de la clase alumno
+let ramiro = new Alumno("Ramiro","Perez","rperez@gmail.com",25,"alguna direccion","alguna URL", 37444555, "FullStack", 123);
+
+document.write("<br>" +ramiro.mostrarLegajo);
+
+ramiro.mostrarDatos();
+ramiro.mostrarDatosAlumno();
 
